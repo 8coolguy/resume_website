@@ -10,7 +10,7 @@ class Question(models.Model):
     #for further development later
     #question_type =models.CharField(max_length=3)
 
-class  Choice(models.Model):
+class Choice(models.Model):
     queston =models.ForeignKey(Question,on_delete=models.CASCADE)
     choice_text =models.CharField(max_length=200)
     votes =models.IntegerField(default=0)
