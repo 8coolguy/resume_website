@@ -22,11 +22,11 @@ class Jobs(models.Model):
     #weeeeeaaall you know'
     #need to have the skill database object connected here ya know
 class Eduaction(models.Model):
-    gpa_flt 
-    school_str
-    major_str
-    expec_grad
-    cool_classes
+    gpa_flt =models.
+    school_str=models.CharField(max_length=200)
+    major_str=models.CharField(max_length=150)
+    expec_grad=models.IntegerField()
+    cool_classes=models.ForeignKey(Class), on_delete)
 class Interests(models.Model):
     image_path=models.CharField(max_length=100)
     interest=models.CharField(max_length)
