@@ -13,7 +13,7 @@
     <p>This is the poll page. Just learning.</p>
     {% for question in latest_question_list %}
     <li>
-        <a href="{%url 'poll:pdetail' question.id%}">{{question.question_text}}</a>
+        <a href="{%url 'poll:detail' question.id%}">{{question.question_text}}</a>
     </li>
     {%endfor%}
     </ul>
