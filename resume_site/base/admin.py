@@ -6,6 +6,6 @@ from . models import *
 admin.site.register(Skill)
 admin.site.register(Project)
 admin.site.register(Eduaction)
-admin.site.register(Classe)
+#admin.site.register(Classe)
 admin.site.register(Interest)
 admin.site.register(Experience)

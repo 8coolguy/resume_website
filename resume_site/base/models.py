@@ -21,13 +21,17 @@ class Experience(models.Model):
     pass
     #weeeeeaaall you know'
     #need to have the skill database object connected here ya know
-class Classe(models.Model):
-    descrip_str=models.TextField(max_length=500)
-    title_str=models.CharField(max_length=100)
+#class Classe(models.Model):
+#    descrip_str=models.TextField(max_length=500)
+#    title_str=models.CharField(max_length=100)
 class Eduaction(models.Model):
     school_str=models.CharField(max_length=200)
     major_str=models.CharField(max_length=150)
     expec_grad=models.DateField()
+    def __str__(self):
+        return self.school_str
 
 class Interest(models.Model):
     interest=models.CharField(max_length=100)
+    def __str__(self):
+        return self.interest
