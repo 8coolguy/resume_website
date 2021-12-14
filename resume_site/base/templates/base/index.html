@@ -2,15 +2,14 @@
 {% block content %}
 <!--{% load static %}-->
 <div class="nav-box">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-        <span class="navbar-brand mb-2 h0" href="#">Arnav Choudhury's Website</span>
+    <nav class="navbar navbar-expand-lg">
+        <span class="navbar-brand mb-5" href="#">Arnav Choudhury's Website</span>
             <ul class="navbar-nav">
-                
                 <li class="nav-item">
-
+                    <a class="nav-link active" aria-current="page" href="#about">About</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#projects">Projects</a>
-                    
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#skills">Skills</a>
@@ -19,20 +18,49 @@
                     <a class="nav-link active" aria-current="page" href="#interests">Interests</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Other</a>
+                    <a class="nav-link disabled" aria-current="page" href="#">Other</a>
                 </li>
 
             </ul>
     </nav>
 </div>
 <body>
-    <div class="row" id="intro">1</div>
+    <div class="row" id="about">
+        <h2>About Me.
+            <h3>
+                Hi my name is Arnav. Here is a page with a bunch of my projects and shit. I also put some cool photos in here from my little adventures.
+            </h3>
+        </h1>
+    </div>
+    <!--
+    <div class="row" id="intro">
+        <div class="row-sm">
+          <p>Row1</p>
+        </div>
+        <div class="row-sm">
+            <p>Row2</p>
+        </div>
+    </div>
+    -->
     <div class="row" id ="projects">
-        <p>Me.</p>
+        {% if projects %}
+            {% for project in projects %}
+                <div class="row" onclick="location.href='{{project.url_link}}';" style="cursor: pointer;">
+                    <h4>{{project.title_str}}</h4>
+                    <p>{{project.descrip_str}}</p>
+                    <image src="/images/{{project.image_path}}"></image>
+                </div>
+
+            {% endfor %}
+        {% else %}
+            <h>No Projects to show right now.</h>
+
+        {% endif %}
     </div>
     <div class="row" id = "skills">
         <image src="{% static '/images/me.jpg' %}"></image>
     </div>
-    <div class="row" 3id = " interests">4</div>
+    <div class="row" id = "interests"></div>
+</body>
 
 {% endblock content%}

@@ -1,6 +1,24 @@
 .nav-box{
-    background-image: url("../images/ocean.png");
+    background: url("../images/ocean.png");
+}
+.nav-item{
+    size: 10%;
+}
+.navbar-brand{
+    color:rgb(255, 0, 0);
+}
+#about{
+    background-color: blue;
+    color: crimson;
+}
+
+image{
+    height: 64px;
+    width:64px;
 }
 p{
     color:rgb(12, 4, 117);
+}
+div{
+    outline: 3px dashed green;
 }
