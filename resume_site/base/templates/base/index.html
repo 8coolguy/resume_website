@@ -43,23 +43,33 @@
     </div>
     -->
     <div class="row" id ="projects">
-        {% if projects %}
-            {% for project in projects %}
-                <div class="row" onclick="location.href='{{project.url_link}}';" style="cursor: pointer;">
-                    <h4>{{project.title_str}}</h4>
-                    <p>{{project.descrip_str}}</p>
-                    <image src="/images/{{project.image_path}}"></image>
+        <h4>Projects</h4> 
+            {% if projects %}
+                {% for project in projects %}
+                <div class="card-mb-6">
+                    <div class="row g-0" onclick="location.href='{{project.url_link}}';" style="cursor: pointer;">
+                        <div class="col-md-4">
+                            <a href ="#">
+                            <image class="media-object" src="/images/{{project.image_path}}" width="256" height="256"></image>
+                            </a>
+                        </div>
+                        <div class ="col-md-8">
+                            <h4 class="card-title">{{project.title_str}}</h4>
+                            <p class="card-text">{{project.descrip_str}}</p>
+                            <p>sf</p>
+                        </div>
+                    </div>
                 </div>
-
-            {% endfor %}
-        {% else %}
-            <h>No Projects to show right now.</h>
-
-        {% endif %}
+                {% endfor %}
+            {% else %}
+                <h>No Projects to show right now.</h>
+            {% endif %}   
     </div>
+
     <div class="row" id = "skills">
         <image src="{% static '/images/me.jpg' %}"></image>
     </div>
+
     <div class="row" id = "interests"></div>
 </body>
 

@@ -13,12 +13,10 @@
 }
 
 image{
-    height: 64px;
-    width:64px;
+    height: 5%;
+    width:5%;
 }
-p{
-    color:rgb(12, 4, 117);
-}
+
 div{
     outline: 3px dashed green;
 }
