@@ -48,12 +48,12 @@
                 {% for project in projects %}
                 <div class="card-mb-6">
                     <div class="row g-0" onclick="location.href='{{project.url_link}}';" style="cursor: pointer;">
-                        <div class="col-md-4">
+                        <div class="col-md-2">
                             <a href ="#">
-                            <image class="media-object" src="/images/{{project.image_path}}" width="256" height="256"></image>
+                            <image class="media-object" src="/images/{{project.image_path}}" width="160" height="120"></image>
                             </a>
                         </div>
-                        <div class ="col-md-8">
+                        <div class ="col-md-4">
                             <h4 class="card-title">{{project.title_str}}</h4>
                             <p class="card-text">{{project.descrip_str}}</p>
                             <p>sf</p>
