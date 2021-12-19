@@ -1,1 +1,1 @@
-web: python manage.py runserver
+web: python resume-site/manage.py runserver
