@@ -25,14 +25,14 @@ ALLOWED_HOSTS = [
 ]
 # Application definition
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
+    'resume_site.polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'base',
+    'resume_site.base',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
