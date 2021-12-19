@@ -1,6 +1,7 @@
 asgiref==3.4.1
 Django==3.2.9
 git-filter-repo==2.34.0
+gunicorn==20.1.0
 mysqlclient==2.0.3
 Pillow==8.4.0
 psycopg2==2.9.2

@@ -1,1 +1,1 @@
-web: python resume-site/manage.py runserver
+web: gunicorn resume-site.resume-site.wsgi
