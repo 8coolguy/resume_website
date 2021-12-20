@@ -44,6 +44,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+#change to resume_site.urls for local run
 ROOT_URLCONF = 'resume_site.resume_site.urls'
 TEMPLATES = [
     {

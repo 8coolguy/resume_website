@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from resume_site.base import urls as base_url
+from resume_site.polls import urls as polls_url
 
 
 urlpatterns = [
     #path('home/', None)
-    path('', include('resume_site.base.urls')),
-    path('polls/', include('resume_site.polls.urls')),
+    path('', base_url),
+    path('polls/', polls_urls),
     path('admin/', admin.site.urls),
 ]
