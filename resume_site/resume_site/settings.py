@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'resume_site.base',
+    'base',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
