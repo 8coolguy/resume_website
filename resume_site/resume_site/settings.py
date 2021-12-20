@@ -19,10 +19,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJ_PASS')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
+    'cryptic-ridge-65571.herokuapp',
 ]
 # Application definition
 INSTALLED_APPS = [
@@ -51,7 +52,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,"templates" )
+            os.path.join(BASE_DIR,"templates")
         ],
         'APP_DIRS': True,
         'OPTIONS': {
