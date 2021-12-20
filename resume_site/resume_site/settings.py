@@ -45,7 +45,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 #change to resume_site.urls for local run
-ROOT_URLCONF = 'resume_site.resume_site.urls'
+ROOT_URLCONF = 'resume_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
