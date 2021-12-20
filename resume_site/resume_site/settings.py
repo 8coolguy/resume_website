@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJ_PASS')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
@@ -28,13 +28,14 @@ ALLOWED_HOSTS = [
 # Application definition
 INSTALLED_APPS = [
     #'polls.apps.PollsConfig',
-    'base',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'base',
     
 ]
 MIDDLEWARE = [
@@ -48,7 +49,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 #change to resume_site.urls for local run
-ROOT_URLCONF = 'resume_site.resume_site.urls'
+ROOT_URLCONF = 'resume_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
