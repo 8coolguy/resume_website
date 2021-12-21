@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Poll Page</title>
+
+
+
+</head>
+
+<body>
+    {% if latest_question_list %}
+    <p>This is the poll page. Just learning.</p>
+    {% for question in latest_question_list %}
+    <li>
+        <a href="{%url 'poll:detail' question.id%}">{{question.question_text}}</a>
+    </li>
+    {%endfor%}
+    </ul>
+    {% else %}
+    <p>No Polls are avalible</p>
+    {% endif %}
+</body>
+
+</html>
