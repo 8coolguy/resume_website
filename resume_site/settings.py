@@ -25,6 +25,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'cryptic-ridge-65571.herokuapp',
+    'arnav-choudhury.herokuapp',
 ]
 # Application definition
 INSTALLED_APPS = [
