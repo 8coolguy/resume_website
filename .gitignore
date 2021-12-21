@@ -1,4 +1,4 @@
 env/*
-resume_site/db_sqlite3
 *.pyc
-resume_site/env
+images/*
+static/*
