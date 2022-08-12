@@ -12,7 +12,7 @@ class Project(models.Model):
     descrip_str =models.TextField(max_length=1000)
     title_str=models.CharField(max_length=100)
     date_completed=models.DateField('date_finished')
-    image_path=models.ImageField(upload_to='images')
+    image_path=models.URLField(max_length=200)
     #skills_used=models.ForeignKey(Skill, on_delete=models.CASCADE)
     def __str__(self):
         return self.title_str
