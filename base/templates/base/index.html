@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 <!--{% load static %}-->
-
-
 <body>
     <div class="nav-box">
         <nav class="navbar navbar-expand-lg">
@@ -50,52 +48,38 @@
         </div>
     </div>
 
-    <div class="row" id="about">
+    <div class="section" id="about">
         <h2>About Me.
             <h3>
                 Hi. My name is Arnav Choudhury. I go to SCU. Here are some of the projects I worked on or am working on. Not much to this site. Hope to add more to it to make it cooler. Trying to do that 
                 <a href="https://indieweb.org/POSSE">POSSE</a> 
                 thing. Reach me at arnavchoudhury20@mittymonarch.com or 8coolguy#3572 on discord or follow and message me on the socials. Website built with bootstrap,plain html, django, posgreSQL, and hosted on heroku. Thanks. Have a nice day.
             </h3>
-        </h1>
+        </h2>
     </div>
-    <!--
-    <div class="row" id="intro">
-        <div class="row-sm">
-          <p>Row1</p>
-        </div>
-        <div class="row-sm">
-            <p>Row2</p>
-        </div>
-    </div>
-    -->
-    <div class="row" id ="projects">
+
+    <div class="section" id ="projects">
         <h4>Projects</h4> 
+        <div class="card-deck"></div>
             {% if projects %}
                 {% for project in projects %}
-                <div class="card-mb-6" onclick="location.href='{{project.url_link}}';" style="cursor: pointer;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <a href ="#">
-                            <image class="media-object" src="{{project.image_path}}" width="100%" height="100%"></image>
-                            </a>
-                        </div>
-                        <div class ="col-md-8">
-                            <h4 class="card-title">{{project.title_str}}</h4>
-                            <h6>Completed:{{project.date_completed}}</h6>
-                            <p class="card-text">{{project.descrip_str}}</p>  
-                        
-                        
-                        </div>
+                
+                <div class="card" onclick="location.href='{{project.url_link}}';" style="width: 18rem;">
+                    <img class="card-img-top" src="{{project.image_path}}">
+                    <div class="card-body">
+                      <h5 class="card-title">{{project.title_str}}</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Completed:{{project.date_completed}}</h6>
+                      <p class="card-text">{{project.descrip_str}}</p>
                     </div>
-                </div>
+                  </div>
                 {% endfor %}
             {% else %}
                 <p>No Projects to show right now.</p>
-            {% endif %}   
+            {% endif %}  
+        </div> 
     </div>
 
-    <div class="row" id = "skills">
+    <div class="section" id = "skills">
         <h4>Skills:</h4>
         {% if skills %}
             {% for skill in skills %}
@@ -109,9 +93,9 @@
             <p>No Skills.</p>
         {% endif %}
         
-    </div>
+    </divsection
 
-    <div class="row" id = "interests">
+    <div class="section" id = "interests">
         <h4>Interests:</h4>
         {% if interests %}
             {% for interest in interests %}
