@@ -2,76 +2,85 @@
 {% block content %}
 <!--{% load static %}-->
 <body>
-    <div class="nav-box">
-        <nav class="navbar navbar-expand-lg">
-            <h class="navbar-brand" href="#">Arnav Choudhury</h>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#interests">Interests</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-current="page" href="#">Other</a>
-                    </li>
-                </ul>
-         
-        </nav>
-        <div class="row" style="text-align: center;">
-            <div class="col-md-3">
-                <i class="fa-brands fa-github btn btn-primary" aria-hidden="true" onclick="location.href='https://github.com/8coolguy';" style="cursor: pointer;"></i>
-            </div>
-            <div class="col-md-3">
-                <i class="fa-brands fa-linkedin btn btn-primary" aria-hidden="true" onclick="location.href='https://www.linkedin.com/in/arnav-choudhury-scu/';" style="cursor: pointer;"></i>
-            </div>
-            <div class="col-md-3">
-                <i class="fa-brands fa-instagram btn btn-primary" aria-hidden="true" onclick="location.href='https://www.instagram.com/notarnav123';" style="cursor: pointer;"></i>
-            </div>
-            <div class="col-md-3">
-                <i class="fa-brands fa-strava btn btn-primary" aria-hidden="true" onclick="location.href='https://www.strava.com/athletes/arnavc';" style="cursor: pointer;"></i>
-            </div>
-            <!--
-            <div class="col-md-2">
-                H
-            </div>
-            <div class="col-md-2">
-                H
-            </div>
-            -->
-        </div>
+    
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" id="sidebar">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            
+            <span class="fs-4">Arnav Choudhury</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="#about" class="nav-link text-white" aria-current="page">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#interests" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+              Interests
+            </a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+              Skills
+            </a>
+          </li>
+          
+          
+        </ul>
+        <hr>
+        <li class="nav-item">
+            <i class="fa-brands fa-github btn btn-primary" aria-hidden="true" onclick="location.href='https://github.com/8coolguy';" style="cursor: pointer;"></i>
+        </li>
+        <li class="nav-item">
+            <i class="fa-brands fa-linkedin btn btn-primary" aria-hidden="true" onclick="location.href='https://www.linkedin.com/in/arnav-choudhury-scu/';" style="cursor: pointer;"></i>
+        </li>
+        <li class="nav-item">
+            <i class="fa-brands fa-instagram btn btn-primary" aria-hidden="false" onclick="location.href='https://www.instagram.com/notarnav123';" style="cursor: pointer;"></i>
+        </li>
+        <li class="nav-item">
+            <i class="fa-brands fa-strava btn btn-primary" aria-hidden="true" onclick="location.href='https://www.strava.com/athletes/arnavc';" style="cursor: pointer;"></i>
+        </li>
     </div>
+        
+   
+    
 
     <div class="section" id="about">
-        <h2>About Me.
-            <h3>
-                Hi. My name is Arnav Choudhury. I go to SCU. Here are some of the projects I worked on or am working on. Not much to this site. Hope to add more to it to make it cooler. Trying to do that 
-                <a href="https://indieweb.org/POSSE">POSSE</a> 
-                thing. Reach me at arnavchoudhury20@mittymonarch.com or 8coolguy#3572 on discord or follow and message me on the socials. Website built with bootstrap,plain html, django, posgreSQL, and hosted on heroku. Thanks. Have a nice day.
-            </h3>
-        </h2>
+        <h2>About Me.</h2>
+        <p>
+            Hi. My name is Arnav Choudhury. I go to SCU. Here are some of the projects I worked on or am working on. Not much to this site. Hope to add more to it to make it cooler. Trying to do that 
+            <a href="https://indieweb.org/POSSE">POSSE</a> 
+            thing. Reach me at arnavchoudhury20@mittymonarch.com or 8coolguy#3572 on discord or follow and message me on the socials. Website built with bootstrap,plain html, django, posgreSQL, and hosted on heroku. Thanks. Have a nice day.
+        </p>
+        
     </div>
 
     <div class="section" id ="projects">
-        <h4>Projects</h4> 
-        <div class="card-deck"></div>
+        <h4 class ="mt-5">Projects</h4> 
+        <div class="scrolling-wrapper row flex-row flex-nowrap">
+            
             {% if projects %}
                 {% for project in projects %}
                 
-                <div class="card" onclick="location.href='{{project.url_link}}';" style="width: 18rem;">
-                    <img class="card-img-top" src="{{project.image_path}}">
-                    <div class="card-body">
-                      <h5 class="card-title">{{project.title_str}}</h5>
-                      <h6 class="card-subtitle mb-2 text-muted">Completed:{{project.date_completed}}</h6>
-                      <p class="card-text">{{project.descrip_str}}</p>
+                    <div class="col-5 card" onclick="location.href='{{project.url_link}}';" style="width: 18rem;">
+                        <img class="card-img-top" src="{{project.image_path}}">
+                        <div class="card-body">
+                        <h5 class="card-title">{{project.title_str}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Completed:{{project.date_completed}}</h6>
+                        <p class="card-text">{{project.descrip_str}}</p>
+                        </div>
                     </div>
-                  </div>
+                
                 {% endfor %}
             {% else %}
                 <p>No Projects to show right now.</p>
@@ -93,7 +102,7 @@
             <p>No Skills.</p>
         {% endif %}
         
-    </divsection
+    </div>
 
     <div class="section" id = "interests">
         <h4>Interests:</h4>
@@ -110,6 +119,7 @@
         {% endif %}
     
     </div>
+
 
 </body>
 {% endblock content%}
